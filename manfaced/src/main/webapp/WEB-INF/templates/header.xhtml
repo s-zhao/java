@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
     <h:head>        
         <title>Facelet Title</title>
     </h:head>
@@ -13,7 +14,7 @@
                     margin-top: 8px;
                 }
             </style>
-            <div id="header">
+            <div id="header" ng-app="manfaced" ng-controller="manfacedCtrl">
                 <div class="container">
                     <div class="row">
                         <nav class="navbar navbar-inverse" role="navigation">
@@ -25,18 +26,17 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">Man Faced</a>
+                            <a class="navbar-brand" href="#{request.contextPath}">Man Faced</a>
                           </div>
 
                           <!-- Collect the nav links, forms, and other content for toggling -->
                           <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                              <li class="active"><a href="#">Link</a></li>
-                              <li><a href="#">Link</a></li>
+                              <ui:insert name="extra_top_nav_link"></ui:insert>                                
                               <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basics<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
+                                  <li><a href="#" ng-click="loadSnippet('#{request.contextPath}/fragments/newjsf.xhtml', 'snippet-data')">Load JSF Fragment</a></li>
                                   <li><a href="#">Another action</a></li>
                                   <li><a href="#">Something else here</a></li>
                                   <li><a href="#">Separated link</a></li>
