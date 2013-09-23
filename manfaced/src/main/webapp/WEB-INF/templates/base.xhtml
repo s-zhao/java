@@ -9,26 +9,21 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css"/>
     </h:head>
     <h:body>
-        <div class="container">
-            <div id="header" class="row">
-                <ui:insert name="header">
-                    <ui:include src="/WEB-INF/templates/header.xhtml"></ui:include>
-                </ui:insert>                
-            </div>
+
+        <ui:insert name="header">
+            <ui:include src="/WEB-INF/templates/header.xhtml"></ui:include>
+        </ui:insert>           
         
-            <div id="content" class="row">
-                <ui:insert name="content">
-                    content data goes here ...
-                </ui:insert>
-            </div>
-            
-            <div id="footer" class="row">
-                <ui:insert name="footer">
-                    <ui:include src="/WEB-INF/templates/footer.xhtml"></ui:include>
-                </ui:insert>                
-            </div>
+        <div class="container">
+            <ui:insert name="content">
+                content data goes here ...
+            </ui:insert>
         </div>
         
+        <ui:insert name="footer">
+            <ui:include src="/WEB-INF/templates/footer.xhtml"></ui:include>
+        </ui:insert>                
+    
         <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>    
     </h:body>
