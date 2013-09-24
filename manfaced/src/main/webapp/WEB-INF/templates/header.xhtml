@@ -16,50 +16,48 @@
             </style>
             <div id="header" ng-app="manfaced" ng-controller="manfacedCtrl">
                 <div class="container">
-                    <div class="row">
-                        <nav class="navbar" role="navigation">
-                          <!-- Brand and toggle get grouped for better mobile display -->
-                          <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                              <span class="sr-only">Toggle navigation</span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="#{request.contextPath}">Man Faced</a>
-                          </div>
+                    <nav class="navbar" role="navigation">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header span3">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                          <a class="navbar-brand" href="#{request.contextPath}">Man Faced</a>
+                      </div>
 
-                          <!-- Collect the nav links, forms, and other content for toggling -->
-                          <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                              <ui:insert name="extra_top_nav_link"></ui:insert>                                
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basics<b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#" ng-click="loadSnippet('#{request.contextPath}/fragments/newjsf.xhtml', 'snippet-data')">Load JSF Fragment</a></li>
-                                  <li><a href="#" ng-click="loadSnippet('#{request.contextPath}/fragments/hashmap.jsp', 'snippet-data')">HashMap</a></li>
-                                  <li><a href="#">Something else here</a></li>
-                                  <li><a href="#">Separated link</a></li>
-                                  <li><a href="#">One more separated link</a></li>
-                                </ul>
-                              </li>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                          <ui:insert name="extra_top_nav_link"></ui:insert>                                
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basics<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" ng-click="loadSnippet('#{request.contextPath}/fragments/list.jsp', 'snippet-data')">List</a></li>                                
+                              <li><a href="#" ng-click="loadSnippet('#{request.contextPath}/fragments/hashmap.jsp', 'snippet-data')">HashMap</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li><a href="#">Separated link</a></li>
+                              <li><a href="#">One more separated link</a></li>
                             </ul>
+                          </li>
+                        </ul>
 
-                            <ul class="nav navbar-nav navbar-right">
-                              <li><a href="#">Link</a></li>
-                              <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                  <li><a href="#">Action</a></li>
-                                  <li><a href="#">Another action</a></li>
-                                  <li><a href="#">Something else here</a></li>
-                                  <li><a href="#">Separated link</a></li>
-                                </ul>
-                              </li>
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="#">Link</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li><a href="#">Separated link</a></li>
                             </ul>
-                          </div><!-- /.navbar-collapse -->
-                        </nav>
-                    </div>
+                          </li>
+                        </ul>
+                      </div><!-- /.navbar-collapse -->
+                    </nav>
                 </div>
             </div>
         </ui:composition>

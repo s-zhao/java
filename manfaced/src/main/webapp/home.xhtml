@@ -10,7 +10,7 @@
 
         <ui:composition template="/WEB-INF/templates/base.xhtml">
         <ui:define name="extra_top_nav_link">
-            <li><a href="#" class="btn-deafult"><span class="badge">it's a joke</span></a></li>            
+            <li><a href="#" class="btn-deafult" ng-click="loadSnippet('#{request.contextPath}/fragments/joke.xhtml', 'snippet-data')"><span class="badge badge-danger">it's a joke</span></a></li>                                               
         </ui:define>            
             <ui:define name="content">
                 <div class="text-center">
