@@ -1,6 +1,20 @@
 <ui:fragment xmlns="http://www.w3.org/1999/xhtml"
              xmlns:ui="http://java.sun.com/jsf/facelets">
     <ul>
-        <ui:insert name="content">Content</ui:insert>
+        <ui:insert name="content">
+            <div class="media">
+                <div class="pull-right">
+                    <img src="#{request.contextPath}/images/man-faced-bug-sm.jpg" />
+                </div>
+                <div class="media-body">
+                    Security ?<br/>
+                    garbage collection hence no memory leaks? <br/>
+                    Messy JSP/JSTL/Scriptlets from percent|dollar|punch brackets ... c|fn|fmt ...<br/> 
+                    Failed JSP and then ASP.NET WebForms Copycat for enterprise? <br/>
+                    
+                    Is it just a joke?
+                </div>
+            </div>            
+        </ui:insert>
     </ul>
 </ui:fragment>

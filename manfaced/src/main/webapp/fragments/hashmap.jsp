@@ -1,9 +1,7 @@
-<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
-<%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.Set" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.Iterator" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
@@ -11,6 +9,8 @@
      * HashMap - key and value must be java Object, cannot be java primitive type
      * 
      * Java Autoboxing and Unboxing
+     * 
+     * @note - for primitive types, just do HasMap map new HashMap();
      * 
      */
     HashMap<String, Integer> map = new HashMap<String, Integer>();
@@ -46,6 +46,8 @@
      * 
      * Java Autoboxing and Unboxing
      * 
+     * @note - for primitive types, just do HasMap map new HashMap();
+     * 
      */
     HashMap&lt;String, Integer&gt; map = new HashMap&lt;String, Integer&gt;();
     
@@ -70,7 +72,7 @@
         System.out.println(pairs.getKey()+":="+pairs.getValue());
     }
     
-    request.setAttribute("items", map); 
+    request.setAttribute("items", map);   
 </code>    
 </pre>
 <pre>
