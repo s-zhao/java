@@ -13,12 +13,30 @@
             <li><a href="#" class="btn-deafult" ng-click="loadSnippet('#{request.contextPath}/fragments/joke.xhtml', 'snippet-data')"><span class="badge badge-danger">it's a joke</span></a></li>                                               
         </ui:define>            
             <ui:define name="content">
-                <div class="text-center">
-                    <h2>Are we brainwashed?</h2>
-                    <p>over the years, Java evolves from a language to <br/>
-                            <strong>beans ... lets ... faces ...</strong>
-                    </p>
-                    <img src="#{request.contextPath}/images/man-faced-bug.jpg" />
+                <div class="media">
+                    <div class="pull-left">
+                        <img src="#{request.contextPath}/images/man-faced-bug.jpg" />
+                    </div>
+                    <div class="media-body">
+                        <div>
+                            <h3>Are we brainwashed?</h3>
+                            <div class="text-right">
+                                <p>over the years, Java evolves from a language to <br/>
+                                        <strong>beans ... lets ... faces ...</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Resources and Links</h3>
+                            <div class="list-group">
+                                <a href="http://docs.oracle.com/javase/tutorial/java/index.html" class="list-group-item" target="_blank">Learning the Java Language</a>
+                                <a href="http://docs.oracle.com/javase/tutorial/java/data/autoboxing.html" class="list-group-item" target="_blank">Autoboxing and Unboxing</a>
+                                <a href="#" class="list-group-item">a</a>
+                                <a href="#" class="list-group-item">a</a>
+                                <a href="#" class="list-group-item">a</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </ui:define>
         </ui:composition>
