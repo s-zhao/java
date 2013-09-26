@@ -42,6 +42,39 @@
 
 <pre>
 <code class="java" id="java-code">
+Map&lt;String, Integer&gt; GPA = new HashMap();
+GPA.put("Weta", 5);
+GPA.put("ManFaced", 4);
+GPA.put("Beetles", 4);
+GPA.put("Earwigs", 2);
+
+Set&lt;String&gt; bugs = GPA.keySet();
+Iterator iter = bugs.iterator();
+System.out.println("iterate over bugs set");
+while(iter.hasNext()) {
+    System.out.println(iter.next());
+}
+System.out.println("");
+
+Collection&lt;Integer&gt; scores = GPA.values();
+iter = scores.iterator();
+System.out.println("iterate over scores set");
+while(iter.hasNext()) {
+    System.out.println(iter.next());
+}
+System.out.println("");
+
+Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entries = GPA.entrySet();
+for(Map.Entry e : entries) {
+    System.out.println(e.getKey()+":="+e.getValue());    
+}
+
+/**
+ * sort the keys
+ * 
+ */
+List&gt;String&gt; sortedKeys = new ArrayList(GPA.keySet());
+Collections.sort(sortedKeys);
 
 </code>
 </pre>
@@ -74,14 +107,23 @@ for(Map.Entry e : entries) {
     System.out.println(e.getKey()+":="+e.getValue());    
 }
 
-SortedSet<String> sorted = new SortedSet<String>(bugs);
+/**
+ * sort the keys
+ * 
+ */
+List<String> sortedKeys = new ArrayList(GPA.keySet());
+Collections.sort(sortedKeys);
 
 request.setAttribute("gpa", GPA);
+request.setAttribute("keys", sortedKeys);
+
 %>
 <div class="panel panel-info">
     <div class="panel-heading"><h3 class="panel-title">Output</h3></div>
     <div class="panel-body">
-            
+        <c:forEach items="${keys}" var="key">
+            <c:out value="${key} := ${gpa.get(key)}" /><br/>
+        </c:forEach>
     </div>
 </div>
         
