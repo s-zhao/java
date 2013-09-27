@@ -20,21 +20,9 @@
         <p>Note that, java generic is a compile time thing, those
             kind of type information are erased after source codes compiled. So they do not
             exist in java byte codes! This is called 
-            <strong><a href="Type Erasure: http://docs.oracle.com/javase/tutorial/java/generics/erasure.html" target="_blank">Type Erasure</a></strong>
+            <strong><a href="http://docs.oracle.com/javase/tutorial/java/generics/erasure.html" target="_blank">Type Erasure</a></strong>
             (it's a design decision and a stupid decision).
         </p>
-    
-<!--
-http://www.programcreek.com/2012/04/why-do-we-need-generic-types-in-java/
-
-The Diamond: http://docs.oracle.com/javase/tutorial/java/generics/types.html#diamond
-Type Inference: http://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html
-
-Type Safety ...
-compile time type error check ...
-cast ...
-
--->
     </div>
 </div>
 
