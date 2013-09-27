@@ -73,7 +73,7 @@ for(Map.Entry e : entries) {
  * sort the keys
  * 
  */
-List&gt;String&gt; sortedKeys = new ArrayList(GPA.keySet());
+List&lt;String&gt; sortedKeys = new ArrayList(GPA.keySet());
 Collections.sort(sortedKeys);
 
 </code>
